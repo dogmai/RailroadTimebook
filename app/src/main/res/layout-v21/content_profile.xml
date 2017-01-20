@@ -42,6 +42,11 @@
             tools:layout_editor_absoluteX="154dp"
             android:textAlignment="center" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
         <TextView
             android:id="@+id/textViewSetDate"
             android:layout_width="match_parent"
@@ -58,7 +63,9 @@
             tools:layout_conversion_absoluteHeight="32dp"
             tools:layout_editor_absoluteY="42dp"
             tools:layout_editor_absoluteX="16dp"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.05"
+            tools:ignore="InefficientWeight" />
+
 
         <EditText
             android:id="@+id/editTextTrainSymbol"
@@ -70,7 +77,8 @@
             tools:layout_conversion_absoluteWidth="379dp"
             tools:layout_conversion_absoluteHeight="42dp"
             tools:layout_editor_absoluteY="74dp"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="16dp"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/editTextEngineNumbers"
@@ -83,68 +91,104 @@
             tools:layout_conversion_absoluteHeight="42dp"
             tools:layout_editor_absoluteY="116dp"
             tools:layout_editor_absoluteX="16dp"
-            android:inputType="numberDecimal" />
-
-        <EditText
-            android:id="@+id/editTextOnDutyLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/ondutylocaiton"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="158dp"
-            tools:layout_conversion_absoluteWidth="379dp"
-            tools:layout_conversion_absoluteHeight="42dp"
-            tools:layout_editor_absoluteY="158dp"
-            tools:layout_editor_absoluteX="16dp"
             android:inputType="text" />
 
-        <TextView
-            android:id="@+id/textViewOndutyTime"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ondutytime"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:clickable="true"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="200dp"
-            tools:layout_conversion_absoluteWidth="379dp"
-            tools:layout_conversion_absoluteHeight="30dp"
-            tools:layout_editor_absoluteY="200dp"
-            tools:layout_editor_absoluteX="16dp"
-            android:layout_weight="0.04" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/editTextOnDutyLocation"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="fill_horizontal"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:hint="@string/ondutylocaiton"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="158dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="158dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:inputType="text"
+                tools:ignore="NestedWeights"
+                android:layout_width="0dp" />
+
+
+            <TextView
+                android:id="@+id/textViewOndutyTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/ondutytime"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:clickable="true"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="200dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_editor_absoluteY="200dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:ignore="NestedWeights" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/editTextOffDutyLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="fill_horizontal"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:hint="@string/offdutylocation"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="231dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="231dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:inputType="text"
+                tools:ignore="NestedWeights" />
+
+
+            <TextView
+                android:id="@+id/textViewOffDutyTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/offdutytime"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:clickable="true"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="273dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_editor_absoluteY="273dp"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextOffDutyLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/offdutylocation"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="231dp"
-            tools:layout_conversion_absoluteWidth="379dp"
-            tools:layout_conversion_absoluteHeight="42dp"
-            tools:layout_editor_absoluteY="231dp"
-            tools:layout_editor_absoluteX="16dp"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textViewOffDutyTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/offdutytime"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:clickable="true"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="273dp"
-            tools:layout_conversion_absoluteWidth="379dp"
-            tools:layout_conversion_absoluteHeight="30dp"
-            tools:layout_editor_absoluteY="273dp"
-            tools:layout_editor_absoluteX="16dp"
-            android:layout_weight="0.04" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:id="@+id/editTextSetPay"
             android:hint="@string/pay"
             tools:layout_conversion_absoluteX="16dp"
@@ -152,13 +196,26 @@
             tools:layout_conversion_absoluteWidth="379dp"
             tools:layout_conversion_absoluteHeight="42dp"
             tools:layout_editor_absoluteY="303dp"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="16dp"
+            android:maxLines="1" />
 
         <Button
             android:id="@+id/buttonSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/saveinformation"
+            tools:layout_conversion_absoluteX="16dp"
+            tools:layout_conversion_absoluteY="346dp"
+            tools:layout_conversion_absoluteWidth="379dp"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_editor_absoluteY="346dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/jobHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/job_history"
             tools:layout_conversion_absoluteX="16dp"
             tools:layout_conversion_absoluteY="346dp"
             tools:layout_conversion_absoluteWidth="379dp"
