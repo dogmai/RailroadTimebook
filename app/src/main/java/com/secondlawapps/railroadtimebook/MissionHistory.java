@@ -25,6 +25,7 @@ public class MissionHistory extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference myRef;
     private Query missionDates;
+    private String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class MissionHistory extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         //myRef = FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("missions");
         missionDates = FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("missions").orderByChild("setDate");
+        //String key = FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("missions").getKey();
     }
 
     @Override
@@ -80,6 +82,8 @@ public class MissionHistory extends AppCompatActivity {
                         viewHolder.setOnDutyTime(model.getOnDutyTime());
                         viewHolder.setOffDutyTime(model.getOffDutyTime());
                         viewHolder.setSetPay(model.getSetPay());
+                        viewHolder.setMealPay(model.getSetMealPay());
+                        viewHolder.setHeldAway(model.getSetHeldAway());
                     }
                 };
 
@@ -97,22 +101,22 @@ public class MissionHistory extends AppCompatActivity {
         }
 
         public void setTrainSymbol(String setTrainSymbol) {
-            EditText post_setTrainSymbol = (EditText) mView.findViewById(R.id.editTextTrainSymbol);
+            TextView post_setTrainSymbol = (TextView) mView.findViewById(R.id.editTextTrainSymbol);
             post_setTrainSymbol.setText(setTrainSymbol);
         }
 
         public void setEngineNumbers(String setEngineNumbers) {
-            EditText post_setEngineNumbers = (EditText) mView.findViewById(R.id.editTextEngineNumbers);
+            TextView post_setEngineNumbers = (TextView) mView.findViewById(R.id.editTextEngineNumbers);
             post_setEngineNumbers.setText(setEngineNumbers);
         }
 
         public void setOnDutyLocation(String onDutyLocation) {
-            EditText post_onDutyLocation = (EditText) mView.findViewById(R.id.editTextOnDutyLocation);
+            TextView post_onDutyLocation = (TextView) mView.findViewById(R.id.editTextOnDutyLocation);
             post_onDutyLocation.setText(onDutyLocation);
         }
 
         public void setOffDutyLocation(String offDutyLocation) {
-            EditText post_offDutyLocation = (EditText) mView.findViewById(R.id.editTextOffDutyLocation);
+            TextView post_offDutyLocation = (TextView) mView.findViewById(R.id.editTextOffDutyLocation);
             post_offDutyLocation.setText(offDutyLocation);
         }
 
@@ -131,8 +135,18 @@ public class MissionHistory extends AppCompatActivity {
             post_offDutyTime.setText(offDutyTime);
         }
 
+        public void setMealPay(String setMealPay) {
+            TextView post_setMealPay = (TextView) mView.findViewById(R.id.editTextSetMealPay);
+            post_setMealPay.setText(setMealPay);
+        }
+
+        public void setHeldAway(String setHeldAway) {
+            TextView post_setHeldAway = (TextView) mView.findViewById(R.id.editTextSetHeldAway);
+            post_setHeldAway.setText(setHeldAway);
+        }
+
         public void setSetPay(String setPay) {
-            EditText post_setPay = (EditText) mView.findViewById(R.id.editTextSetPay);
+            TextView post_setPay = (TextView) mView.findViewById(R.id.editTextSetPay);
             post_setPay.setText(setPay);
         }
     }

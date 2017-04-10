@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.secondlawapps.railroadtimebook.MissionHistory"
-    android:layout_height="300dp"
-    android:elevation="20dp">
+    android:layout_height="330dp"
+    android:elevation="20dp"
+    >
 
 
     <android.support.constraint.ConstraintLayout
@@ -32,7 +33,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.0"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:elevation="@dimen/activity_vertical_margin"
+            android:background="@color/cardview_light_background">
 
             <TextView
                 android:id="@+id/textViewUserEmail"
@@ -68,7 +71,7 @@
                 tools:ignore="InefficientWeight" />
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTrainSymbol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +83,7 @@
                 tools:layout_editor_absoluteY="74dp"
                 tools:layout_editor_absoluteX="16dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextEngineNumbers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,8 +93,9 @@
                 tools:layout_conversion_absoluteWidth="379dp"
                 tools:layout_conversion_absoluteHeight="42dp"
                 tools:layout_editor_absoluteY="116dp"
-                tools:layout_editor_absoluteX="16dp"
-                android:inputType="text" />
+                tools:layout_editor_absoluteX="16dp">
+
+            </TextView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,7 +104,7 @@
                 android:gravity="center"
                 >
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextOnDutyLocation"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -114,7 +118,6 @@
                     tools:layout_conversion_absoluteHeight="42dp"
                     tools:layout_editor_absoluteY="158dp"
                     tools:layout_editor_absoluteX="16dp"
-                    android:inputType="text"
                     tools:ignore="NestedWeights"
                     android:layout_width="0dp" />
 
@@ -146,7 +149,7 @@
                 android:gravity="center"
                 >
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextOffDutyLocation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -161,7 +164,6 @@
                     tools:layout_conversion_absoluteHeight="42dp"
                     tools:layout_editor_absoluteY="231dp"
                     tools:layout_editor_absoluteX="16dp"
-                    android:inputType="text"
                     tools:ignore="NestedWeights" />
 
 
@@ -185,10 +187,35 @@
 
             </LinearLayout>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/editTextSetHeldAway"
+                android:hint="@string/heldaway"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="303dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="303dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextSetMealPay"
+                android:hint="@string/mealpay"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="303dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="303dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/editTextSetPay"
                 android:hint="@string/pay"
                 tools:layout_conversion_absoluteX="16dp"

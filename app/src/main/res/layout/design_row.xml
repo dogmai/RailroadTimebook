@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="300dp"
+    android:layout_height="330dp"
     android:layout_width="match_parent"
     android:layout_margin="20dp"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:elevation="20dp">
+    android:elevation="20dp"
+    android:background="@color/cardview_dark_background"
+    app:cardBackgroundColor="@color/cardview_dark_background">
 
 
         <LinearLayout
@@ -34,7 +36,7 @@
                 android:text="@string/setdate"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:clickable="true"
-                android:textColor="?attr/actionMenuTextColor"
+                android:textColor="@android:color/white"
                 android:textColorHint="@color/colorAccent"
                 android:textColorLink="@color/colorAccent"
                 tools:layout_conversion_absoluteX="16dp"
@@ -44,10 +46,12 @@
                 tools:layout_editor_absoluteY="42dp"
                 tools:layout_editor_absoluteX="16dp"
                 android:layout_weight="0.05"
-                tools:ignore="InefficientWeight" />
+                tools:ignore="InefficientWeight"
+                android:textSize="24sp"
+                android:padding="2dp" />
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTrainSymbol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,9 +62,12 @@
                 tools:layout_conversion_absoluteHeight="42dp"
                 tools:layout_editor_absoluteY="74dp"
                 tools:layout_editor_absoluteX="16dp"
-                android:inputType="text" />
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/cardview_light_background"
+                android:textSize="24sp"
+                android:padding="2dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextEngineNumbers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +78,10 @@
                 tools:layout_conversion_absoluteHeight="42dp"
                 tools:layout_editor_absoluteY="116dp"
                 tools:layout_editor_absoluteX="16dp"
-                android:inputType="text" />
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/cardview_light_background"
+                android:textSize="24sp"
+                android:padding="2dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,7 +90,7 @@
                 android:gravity="center"
                 >
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextOnDutyLocation"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -94,9 +104,12 @@
                     tools:layout_conversion_absoluteHeight="42dp"
                     tools:layout_editor_absoluteY="158dp"
                     tools:layout_editor_absoluteX="16dp"
-                    android:inputType="text"
                     tools:ignore="NestedWeights"
-                    android:layout_width="0dp" />
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/cardview_light_background"
+                    android:textSize="24sp"
+                    android:padding="2dp" />
 
 
                 <TextView
@@ -116,7 +129,10 @@
                     tools:layout_conversion_absoluteHeight="30dp"
                     tools:layout_editor_absoluteY="200dp"
                     tools:layout_editor_absoluteX="16dp"
-                    tools:ignore="NestedWeights" />
+                    tools:ignore="NestedWeights"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:padding="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,7 +142,7 @@
                 android:gravity="center"
                 >
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextOffDutyLocation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -141,8 +157,11 @@
                     tools:layout_conversion_absoluteHeight="42dp"
                     tools:layout_editor_absoluteY="231dp"
                     tools:layout_editor_absoluteX="16dp"
-                    android:inputType="text"
-                    tools:ignore="NestedWeights" />
+                    tools:ignore="NestedWeights"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/cardview_light_background"
+                    android:textSize="24sp"
+                    android:padding="2dp" />
 
 
                 <TextView
@@ -161,14 +180,50 @@
                     tools:layout_conversion_absoluteWidth="379dp"
                     tools:layout_conversion_absoluteHeight="30dp"
                     tools:layout_editor_absoluteY="273dp"
-                    tools:layout_editor_absoluteX="16dp" />
+                    tools:layout_editor_absoluteX="16dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:padding="2dp" />
 
             </LinearLayout>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/editTextSetHeldAway"
+                android:hint="@string/heldaway"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="303dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="303dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:maxLines="1"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:padding="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextSetMealPay"
+                android:hint="@string/mealpay"
+                tools:layout_conversion_absoluteX="16dp"
+                tools:layout_conversion_absoluteY="303dp"
+                tools:layout_conversion_absoluteWidth="379dp"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_editor_absoluteY="303dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:maxLines="1"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:padding="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/editTextSetPay"
                 android:hint="@string/pay"
                 tools:layout_conversion_absoluteX="16dp"
@@ -177,7 +232,12 @@
                 tools:layout_conversion_absoluteHeight="42dp"
                 tools:layout_editor_absoluteY="303dp"
                 tools:layout_editor_absoluteX="16dp"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/cardview_light_background"
+                android:textIsSelectable="false"
+                android:textSize="24sp"
+                android:padding="2dp" />
 
         </LinearLayout>
 
